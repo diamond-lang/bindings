@@ -1,0 +1,22 @@
+link_with "-lraylib -lGL -lm -lpthread -ldl -lrt -lX11"
+
+extern InitWindow(width: int32, height: int32, title: string): void
+extern WindowShouldClose(): bool
+extern CloseWindow(): void
+extern SetTargetFPS(fps: int32): void
+extern BeginDrawing(): void
+extern ClearBackground(color: Color): void
+extern DrawText(text: string, pos_x: int32, pos_y: int32, font_size: int32, color: Color): void
+extern EndDrawing(): void
+
+type Color
+    r: int8
+    g: int8
+    b: int8
+    a: int8
+
+function raywhite(): Color
+    return Color(r: 245, g: 245, b: 245, a: 255)
+
+function lightgray(): Color
+    return Color(r: 200, g: 200, b: 200, a: 255)

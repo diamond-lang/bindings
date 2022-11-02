@@ -1,0 +1,13 @@
+use "raylib"
+
+InitWindow(1600, 900, "raylib [core] example - basic window")
+
+SetTargetFPS(60)
+
+while not WindowShouldClose()
+    BeginDrawing()
+    ClearBackground(raywhite())
+    DrawText("Congrats! You created your first window!", 380, 400, 40, lightgray())
+    EndDrawing()
+
+CloseWindow()
